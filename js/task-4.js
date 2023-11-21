@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
+
 function getShippingCost(country) {
     let price;
+
     switch (country) {
         case 'China':
             price = 100;
@@ -13,13 +15,12 @@ function getShippingCost(country) {
             break;
         case 'Jamaica':
             price = 120;
-
             break;
-    default:
-    console.log("Sorry, there is no delivery to your country");
+        default:
+            return "Sorry, there is no delivery to your country";
     }
-    console.log(`Shipping to ${country} will cost ${price} credits`);
-    return;
+
+    return `Shipping to ${country} will cost ${price} credits`;
 }
 
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
